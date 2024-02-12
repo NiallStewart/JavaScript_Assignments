@@ -99,3 +99,22 @@ checkSpeed(60);
 checkSpeed(130);
 checkSpeed(80);
 checkSpeed(70);
+
+// 8 - Write a function which checks number if given input/parameter is odd or even
+function isEvenOrOdd(arg) {
+  if (arg % 2 != 0) {
+    console.log(`${arg} is odd`);
+  } else {
+    console.log(`${arg} is even`);
+  }
+}
+
+isEvenOrOdd(1);
+isEvenOrOdd(3);
+isEvenOrOdd(5);
+isEvenOrOdd(7);
+
+isEvenOrOdd(2);
+isEvenOrOdd(4);
+isEvenOrOdd(6);
+isEvenOrOdd(8);
