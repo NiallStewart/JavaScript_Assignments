@@ -118,3 +118,42 @@ isEvenOrOdd(2);
 isEvenOrOdd(4);
 isEvenOrOdd(6);
 isEvenOrOdd(8);
+
+// 9 - Write a function that checks if 2 objects are equal
+function objectsEqual(obj1, obj2) {
+  if (typeof obj1 !== "object" && typeof obj2 !== "object") {
+    return false;
+  }
+  let props1 = Object.getOwnPropertyNames(obj1);
+  let props2 = Object.getOwnPropertyNames(obj2);
+  if (props1.length != props2.length) {
+    return false;
+  }
+  for (var i = 0; i < props1.length; i++) {
+    let val1 = obj1[props1[i]];
+    let val2 = obj2[props1[i]];
+    if (val1 !== val2) {
+      return false;
+    }
+  }
+  return true;
+}
+
+const student1 = {
+  name: "Niall",
+  age: 23,
+};
+
+const student2 = {
+  name: "Conor",
+  age: 24,
+};
+
+const student3 = {
+  name: "Niall",
+  age: 23,
+};
+
+console.log(objectsEqual(student1, student2));
+console.log(objectsEqual(student1, "student"));
+console.log(objectsEqual(student1, student3));
